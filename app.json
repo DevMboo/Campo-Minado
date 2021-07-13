@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "jogo",
-    "slug": "jogo",
+    "name": "Campo-Minado",
+    "slug": "Campo-Minado",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -85,4 +85,17 @@ const fields = board => [].concat(...board)
 const hadExplosion = board => fields (board)
     .filter(field => field.exploded).length > 0
 
-export { createMinedBoard }
+const pedding = field => (field.mined && !field.flagged)
+    || (!field.mined && !field.opened)
+const wonGame = board => fields(board).filter(pedding).length === 0
+const showMines = board => fields(board).filter(field => field.mined)
+    .forEach(field => field.opened = true)
+
+export { 
+    cloneBoard,
+    openField,
+    hadExplosion,
+    wonGame,
+    showMines,
+    createMinedBoard,
+    }
